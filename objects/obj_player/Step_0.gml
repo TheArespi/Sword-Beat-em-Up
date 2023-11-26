@@ -20,6 +20,26 @@ var _direction_button_pressed = _key_left_pressed or _key_right_pressed or _key_
 var _direction_button_released = _key_left_released or _key_right_released or _key_up_released or _key_down_released;
 var _direction_button_is_not_pressing = _horizontal_not_pressed and _vertical_not_pressed;
 
+var _vstrike_pressed = keyboard_check(ord("1"));
+var _hstrike_pressed = keyboard_check(ord("2"));
+var _stab_pressed = keyboard_check(ord("3"));
+
+if (_vstrike_pressed){
+	if (sprite_index != spr_player_vertical_strike)
+		sprite_index = spr_player_vertical_strike
+}
+
+if (_hstrike_pressed){
+	if (sprite_index != spr_player_horizontal_strike)
+		sprite_index = spr_player_horizontal_strike
+}
+
+if (_stab_pressed){
+	if (sprite_index != spr_player_stab)
+		sprite_index = spr_player_stab
+}
+	
+	
 if (_horizontal_not_pressed) 
 	hspeed = 0;
 else if (_key_left) {
